@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="map-container">
     <MapView
       basemap-string="streets"
       :latitude="45"
@@ -20,3 +20,10 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+.map-container {
+  height: 500px;
+  width: 500px;
+}
+</style>
