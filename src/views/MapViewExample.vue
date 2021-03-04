@@ -2,8 +2,8 @@
   <div class="map-container">
     <MapView
       basemap-string="streets"
-      :latitude="45"
-      :longitude="34"
+      :latitude="40"
+      :longitude="-105"
       :zoom="12"
     />
   </div>
