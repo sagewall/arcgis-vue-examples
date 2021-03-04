@@ -1,12 +1,17 @@
 <template>
   <div>
-    <MapView />
+    <MapView
+      basemap-string="streets"
+      :latitude="45"
+      :longitude="34"
+      :zoom="12"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
 import MapView from '@/components/MapView.vue'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'MapViewExample',

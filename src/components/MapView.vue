@@ -3,26 +3,55 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import esriConfig from '@arcgis/core/config.js'
+import Point from '@arcgis/core/geometry/Point'
 import Map from '@arcgis/core/Map'
 import MapView from '@arcgis/core/views/MapView'
-import esriConfig from '@arcgis/core/config.js'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'MapView',
+
+  props: {
+    basemapString: {
+      type: String,
+      default: 'satellite'
+    },
+    latitude: {
+      type: Number,
+      default: 39.62435
+    },
+    longitude: {
+      type: Number,
+      default: -104.70632
+    },
+    zoom: {
+      type: Number,
+      default: 12
+    }
+  },
+
+  computed: {
+    center(): Point {
+      return new Point({
+        latitude: this.latitude,
+        longitude: this.longitude
+      })
+    }
+  },
 
   mounted() {
     esriConfig.assetsPath = './assets'
 
     const webmap: Map = new Map({
-      basemap: 'satellite'
+      basemap: this.basemapString
     })
 
     new MapView({
       container: this.$el,
       map: webmap,
-      center: [-104.70632, 39.62435],
-      zoom: 12
+      center: this.center,
+      zoom: this.zoom
     })
   }
 })
