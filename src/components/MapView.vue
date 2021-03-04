@@ -12,12 +12,11 @@ export default defineComponent({
   name: 'MapView',
 
   mounted() {
+    esriConfig.assetsPath = './assets'
+
     const webmap: Map = new Map({
       basemap: 'satellite'
     })
-
-    // Set this property to insure assets resolve correctly.
-    esriConfig.assetsPath = './assets'
 
     new MapView({
       container: this.$el,
@@ -29,7 +28,6 @@ export default defineComponent({
 })
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .mapdiv {
   height: 500px;
