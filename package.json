@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "copy": "cp -r ./node_modules/@arcgis/core/assets ./public"
+    "copy": "cp -r ./node_modules/@arcgis/core/assets ./public",
+    "postinstall": "npm run copy"
   },
   "dependencies": {
     "@arcgis/core": "^4.18.1",
