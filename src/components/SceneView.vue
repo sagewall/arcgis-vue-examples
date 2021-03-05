@@ -11,7 +11,7 @@ import SceneView from '@arcgis/core/views/SceneView'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'MapView',
+  name: 'SceneView',
 
   props: {
     basemapString: {
