@@ -18,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/SceneViewExample..vue')
   },
   {
+    path: '/syncronized-views-example',
+    name: 'SyncronizedViewsExample',
+    component: () => import('../views/SyncronizedViewsExample.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import('../views/About.vue')
