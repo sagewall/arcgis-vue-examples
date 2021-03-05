@@ -1,5 +1,5 @@
 <template>
-  <div class="scenediv"></div>
+  <div class="scene-view"></div>
 </template>
 
 <script lang="ts">
@@ -85,7 +85,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.scenediv {
+.scene-view {
   padding: 0;
   margin: 0;
   height: 100%;

@@ -1,5 +1,5 @@
 <template>
-  <div class="mapdiv"></div>
+  <div class="map-view"></div>
 </template>
 
 <script lang="ts">
@@ -58,7 +58,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.mapdiv {
+.map-view {
   padding: 0;
   margin: 0;
   height: 100%;
